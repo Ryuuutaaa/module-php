@@ -1,0 +1,21 @@
+.table {
+  margin: 16px 0 25px 0;
+  width: 100%;
+}
+.table tbody tr td a {
+  text-align: center;
+}
+.table tr {
+  height: 30px;
+}
+.table tr td {
+  padding: 5px 10px;
+}
+
+.tambah {
+  padding: 8px 15px;
+  background-color: #97191d;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
