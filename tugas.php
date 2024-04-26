@@ -69,7 +69,15 @@ if ($_SESSION['status_login'] != true) {
                                     <td><?php echo $row['nama_nim'] ?></td>
                                     <td><a href="tugas/<?php echo $row['tugas_image'] ?>" target="_blank"><img src="tugas/<?php echo $row['tugas_image'] ?>" width=100px></a></td>
                                     <td><?php echo $row['tugas_format'] ?></td>
-                                    <td><?php echo ($row['tugas_status'] == 0) ? 'Belum Mengumpulkan' : 'Selesai'; ?></td>
+                                    <td>
+                                        <?php
+                                        if ($row['tugas_status'] == 0) {
+                                            echo '<span class="badge text-bg-danger">Belum Mengumpulkan</span>';
+                                        } else {
+                                            echo '<span class="badge text-bg-success">Selesai</span>';
+                                        }
+                                        ?>
+                                    </td>
                                     <td align="center">
                                         <a href="edit-tugas.php?id=<?php echo $row['tugas_id'] ?>">Edit</a> ||
                                         <a href="hapus.php?idp=<?php echo $row['tugas_id'] ?>" onclick="return confirm('Yakin ingin hapus?')">Hapus</a>
